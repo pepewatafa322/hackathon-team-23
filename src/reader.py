@@ -51,7 +51,7 @@ class EmailReader:
             if b"\x00" in chunk:
                 return "", "binary"
 
-            encodings = ["utf-8", "utf-8-sig", "cp1251", "utf-16", "latin-1"]
+            encodings = ["utf-8", "utf-8-sig", "cp1251", "utf-16"]
 
             for encoding in encodings:
                 try:
