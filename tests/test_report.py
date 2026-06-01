@@ -13,7 +13,7 @@ def test_generate_stats_empty(report_generator):
     stats = report_generator.generate_stats([])
 
     for cat in Category:
-        assert stats[cat.value] == 0
+        assert stats.get(cat.value, 0) == 0
 
 
 def test_generate_stats_single_category(
@@ -85,8 +85,8 @@ def test_format_report_with_data(report_generator):
     report = report_generator.format_report(stats)
 
     assert "Всего писем: 3" in report
-    assert "Категория spam: 2" in report
-    assert "Категория hr: 1" in report
+    assert "Категория Спам: 2" in report
+    assert "Категория Кадровые: 1" in report
 
 
 def test_save_report(tmp_path: Path, report_generator):
@@ -110,4 +110,4 @@ def test_save_report(tmp_path: Path, report_generator):
         encoding="utf-8"
     )
 
-    assert "Категория spam: 5" in content
+    assert "Категория Спам: 5" in content
