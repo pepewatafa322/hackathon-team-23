@@ -19,8 +19,15 @@ class Category(Enum):
 class Email:
     filename: str
     subject: str = ""
+
     sender: str = ""
+    sender_name: str = ""
+    sender_email: str = ""
+
     recipient: str = ""
+    recipient_name: str = ""
+    recipient_email: str = ""
+    
     date: str = ""
     body: str = ""
     raw_content: str = ""
