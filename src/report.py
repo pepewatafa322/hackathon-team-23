@@ -26,14 +26,7 @@ class ReportGenerator:
             else:
                 percent = 0
             report_text = (
-                report_text
-                + "Категория "
-                + str(cat)
-                + ": "
-                + str(count)
-                + " ("
-                + str(round(percent, 2))
-                + "%)\n"
+                report_text + "Категория " + str(cat) + ": " + str(count) + " (" + str(round(percent, 2))+ "%)\n"
             )
 
         return report_text
