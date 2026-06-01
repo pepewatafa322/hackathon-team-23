@@ -1,7 +1,7 @@
 import json
 import re
 from pathlib import Path
-from models import Email
+from src.models import Email
 
 
 class EmailParsingError(Exception):
