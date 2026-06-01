@@ -1,6 +1,7 @@
 import shutil
 from pathlib import Path
-from src.logger_config import logger
+from src.logger_config import setup_logger
+logger = setup_logger()
 
 class EmailCopier:
     def __init__(self, out_root: Path):
